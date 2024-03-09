@@ -1,0 +1,121 @@
+*{
+    /*margin: 10;
+    padding: 10; */
+}
+
+body{
+    animation: glow-text 10s 3s infinite
+    imgSize 10s 3s infinite animatedBorder 10s 3s infinite; 
+}
+
+h1{
+    color:brown;
+}
+
+img{
+    /* propety: name duration delay iteration */
+    animation: imgSize 5s 2s;
+    border: 5px solid palevioletred;
+    width: 75%;
+    height: auto;
+}
+div{
+    /* animation: animatedBorder 10s 3s glow-animation 10s 3s imgSize 10s 3s infinite; */
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: pulse;
+    animation-duration: 10s 2s infinite;
+  }
+container{
+    display: inline-block;
+  }
+item{
+    width: 100px;
+    height: 1000px;
+    margin: 20px;
+    background-color: lightblue;
+}
+nav-flex-container{
+    display: flex;
+    background-color: lightblue;
+    width: 100vw;
+    height: 50px;
+    align-items: center;
+    justify-content: flex-end;
+}
+flex-container{
+    display: flex; 
+    float: left;
+    width: 100vw;
+    height: 50vh;
+    background-color: bisque;
+    border: 10px;
+    flex-direction: column;
+    /* shifts items on main axis*/
+    justify-content:;
+    space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+flex-item{
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    border: 2px;
+    border-radius: 3px; 
+    align-items: center;
+}
+  
+glow-text {
+    font-size: 24px;
+    animation: glow-animation 10s 2s infinite alternate; /* Apply the animation */
+  }
+ 
+
+/* DEFINE THE ANIMATION */
+
+@keyframes glow-animation {
+    0%{
+        text-shadow: 0 0 10px red; /* Start */
+      }
+    20%{
+        text-shadow: 0 0 10px yellowgreen;
+    }
+      50% {
+        text-shadow: 0 0 20px blue; /* Mid */
+      }
+      100% {
+        text-shadow: 0 0 30px green; /* End */
+      }
+    }
+    
+
+
+@keyframes imgSize{
+    0%{
+        width: 200px}
+    50%{
+        width: 500px}
+    100%{
+        width: 200px
+    }
+}
+
+@keyframes animatedBorder{
+0% {
+        border-color: red;
+      }
+50% {
+        border-color: blue;
+      }
+75% {
+        border-color: green;  
+}   
+
+
+
